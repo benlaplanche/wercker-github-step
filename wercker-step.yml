@@ -2,8 +2,8 @@ name: github-deploy
 version: 0.0.1
 description: deploy to a github repo
 keywords:
-	- github
-	- deploy
-	- nuke
-	- repository
-	- git
+    - github
+    - deploy
+    - nuke
+    - repository
+    - git

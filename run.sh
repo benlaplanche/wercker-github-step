@@ -3,14 +3,16 @@ if [ ! -n "$GITHUB_REMOTE" ]; then
 	exit 1
 fi
 
-if [ ! -n "$GITHUB_MESSAGE" ]; then
+commit_message=`get_option commit_message`
+
+if [ ! -n "$commit_message" ]; then
 	error 'Please specify a commit message'
 	exit 1
 fi
 
 git init
 git add .
-git commit -m $GITHUB_MESSAGE
+git commit -m $commit_message
 git push -f $GITHUB_REMOTE master
 
 success 'Deployed to GitHub Repo successfully'
